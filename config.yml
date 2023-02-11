@@ -1,4 +1,110 @@
+# https://github.com/adityatelange/hugo-PaperMod/wiki/Variables#site-variables-under-params
+
 baseURL: 'http://giovanniarcudi.github.io/'
 languageCode: en-gb
 title: Giovanni Arcudi
 theme: PaperMod
+enableEmoji: true
+disqusShortname: giovanni-arcudi-personal-website
+
+# menu:
+#   main:
+#     - identifier: about
+#       name: About
+#       weight: 10
+#     - identifier: archives
+#       name: Archive
+#       url: /archives/
+#       weight: 20
+
+minify:
+    disableXML: true
+
+# Site Variables under Params
+params:
+  env: "production" #To set env to production
+  title: "Giovanni Arcudi" #To set title
+  description: "Giovanni Arcudi - Personal Website" #To set site description
+  author: "Giovanni Arcudi" #To show multiple Authors
+  images: "profilePicture.jpg" #Link or path of image for opengraph, twitter-cards
+  keywords: [blog, page] #Add keywords for Home page
+  DateFormat: "Monday, January 2, 2006" #The format of date strings in the website.
+  ShowReadingTime: true #To show read time in post meta
+  ShowShareButtons: true #To show/hide share buttons under post
+  ShowCodeCopyButtons: true #To show/hide Code Copy button
+  ShowFullTextinRSS: false #To show Content in RSS feed
+  defaultTheme: auto #To set default theme
+  disableThemeToggle: false #To disable theme toggle icon shown besides label
+  disableSpecial1stPost: true #To disable no-card special appearance of 1st post
+  disableScrollToTop: false #To disable ScrollToTop button
+  disableAnchoredHeadings: true #To disable Anchored Headings
+  hideMeta: false #To Hide meta elements : date, read-time, author and available-translations for page
+  hideSummary: true #To Hide summary being shown in list pages
+  showtoc: true #To show/hide Table of Contents
+  tocopen: true #To keep open ToC by default on page load
+  ShowPostNavLinks: true #Show Previous and Next Posts below a Post
+  ShowBreadCrumbs: true #Show BreadCrumb Navigation above single post/page
+  ShareButtons: ["linkedin", "twitter", "facebook", "whatsapp", "telegram", "reddit"] #To customize which share buttons to be enabled on page
+  ShowWordCount: false #To word count to metadata
+  ShowRssButtonInSectionTermList: false #To show RSS icon in Section, Term and List pages
+  UseHugoToc: true #To use Hugo's default Toc instead of custom
+  comments: true #To show/hide comments
+  hideFooter: true #To Hide Footer Text om the end of page
+  # CanonicalLinkText: "Originally published at " #To show text before canonical URL's hostname
+  displayFullLangName: false #To show languageName under a language in Language switch header
+
+  # Top Bar 
+  label: 
+    # text: "" #To display different label text other than title
+    # icon: "profilePicture.jpg" #To display a logo image in label
+    # iconHeight: 50 #To set size of label logo image
+
+  # For search bar (https://fusejs.io/api/options.html)
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"] ##  can be less but not more than shown in list
+
+  # Social Icons (https://github.com/adityatelange/hugo-PaperMod/wiki/Icons)
+  socialIcons:
+    - name: "linkedin"
+      url: "https://linkedin.com/in/giovanniarcudi"
+    - name: "github"
+      url: "https://github.com/GiovanniArcudi"
+
+  # To enable profile mode
+  profileMode:
+    enabled: true #For enabling profileMode, needs to be explicitly set
+    title: "Giovanni Arcudi" #optional default will be site title
+    subtitle: "MEng - Computer Science with Artificial Intelligence"
+    imageUrl: "profilePicture.jpg" # optional
+    imageTitle: Profile Picture # optional
+    imageWidth: 150 # custom size
+    imageHeight: 150 # custom size
+    # buttons:
+    #   - name: Archives
+    #     url: archives
+    #   - name: Tags
+    #     url: tags
+
+  # Home Info for when profile mde is disabled
+  homeInfoParams:
+    Title: "Welcome! \U0001F44B"
+    Content: |
+      My name is **Giovanni Arcudi**, and I am final year MEng - Computer Science with AI at the University of Southampton.
+      
+      Welcome to my personal website.
+
+  # editPost:
+  #   URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+  #   Text: "Suggest Changes" # edit text
+  #   appendFilePath: true # to append file path to Edit link
+  outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
